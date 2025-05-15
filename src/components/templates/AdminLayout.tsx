@@ -9,7 +9,7 @@ import {
   MenuFoldOutlined,
   MenuUnfoldOutlined,
 } from "@ant-design/icons";
-import { Link, useNavigate, Outlet } from "react-router-dom";
+import { Link, Outlet, useNavigate } from "react-router-dom";
 import { useAuth } from "../../hooks/useAuth";
 
 const { Header, Sider, Content, Footer } = Layout;
@@ -83,12 +83,12 @@ const AdminLayout: React.FC = () => {
       </Sider>
       <Layout className="site-layout">
         <Header
-          className="site-layout-background"
           style={{
             padding: "0 16px",
             display: "flex",
             justifyContent: "space-between",
             alignItems: "center",
+            background: "#fff",
           }}
         >
           <Button
@@ -99,7 +99,6 @@ const AdminLayout: React.FC = () => {
               fontSize: "16px",
               width: 64,
               height: 64,
-              color: "black", // O el color que prefieras para el icono
             }}
           />
           <div style={{ display: "flex", alignItems: "center" }}>
@@ -113,7 +112,6 @@ const AdminLayout: React.FC = () => {
           </div>
         </Header>
         <Content
-          className="site-layout-background"
           style={{
             margin: "24px 16px",
             padding: 24,
