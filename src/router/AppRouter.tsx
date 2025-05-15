@@ -4,24 +4,13 @@ import LoginPage from "../pages/LoginPage";
 import ProtectedRoute from "./ProtectedRoute";
 import AdminLayout from "../components/templates/AdminLayout";
 import PublicLayout from "../components/templates/PublicLayout";
+import AdminCompaniesPage from "../pages/AdminCompaniesPage";
+import AdminProductsPage from "../pages/AdminProductsPage";
+import AdminInventoryPage from "../pages/AdminInventoryPage";
+import AdminDashboardPage from "../pages/AdminDashboardPage";
+import NotFoundPage from "../pages/NotFoundPage";
+import PublicCompaniesPage from "../pages/PublicCompaniesPage";
 
-// Páginas (crea placeholders por ahora si no existen)
-const AdminDashboardPage: React.FC = () => (
-  <div>Admin Dashboard (Próximamente)</div>
-);
-const AdminCompaniesPage: React.FC = () => (
-  <div>Admin Empresas (Próximamente)</div>
-);
-const AdminProductsPage: React.FC = () => (
-  <div>Admin Productos (Próximamente)</div>
-);
-const AdminInventoryPage: React.FC = () => (
-  <div>Admin Inventario (Próximamente)</div>
-);
-const PublicCompaniesPage: React.FC = () => (
-  <div>Página Pública de Empresas (Próximamente)</div>
-);
-const NotFoundPage: React.FC = () => <div>404 - Página no encontrada</div>;
 
 const AppRouter: React.FC = () => {
   return (

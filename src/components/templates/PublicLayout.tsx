@@ -1,6 +1,7 @@
 import React, { type ReactNode } from "react";
 import { Layout, Menu, Typography } from "antd";
 import { Link } from "react-router-dom";
+import { useAuth } from "../../hooks/useAuth";
 
 const { Header, Content, Footer } = Layout;
 const { Title } = Typography;
@@ -10,6 +11,7 @@ interface PublicLayoutProps {
 }
 
 const PublicLayout: React.FC<PublicLayoutProps> = ({ children }) => {
+  const { isAuthenticated } = useAuth();
   return (
     <Layout className="layout" style={{ minHeight: "100vh" }}>
       <Header style={{ display: "flex", alignItems: "center" }}>
@@ -31,7 +33,11 @@ const PublicLayout: React.FC<PublicLayoutProps> = ({ children }) => {
             <Link to="/empresas-publico">Empresas</Link>
           </Menu.Item>
           <Menu.Item key="2">
-            <Link to="/login">Admin Login</Link>
+            {isAuthenticated ? (
+              <Link to="/admin/dashboard">Dashboard</Link>
+            ) : (
+              <Link to="/login">Admin Login</Link>
+            )}
           </Menu.Item>
         </Menu>
       </Header>
